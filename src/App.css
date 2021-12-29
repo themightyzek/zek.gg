@@ -1,5 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+@import url("https://use.typekit.net/eea7oea.css");
+
 .App {
   text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  max-height: 100vh;
+  color: whitesmoke;
 }
 
 .App-logo {
@@ -14,8 +21,8 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  min-height: 50vh;
+  padding: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +42,34 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+.mainLeft {
+  flex: 1;
+}
+
+.mainRight {
+  flex: 1;
+  font-family: meno-banner, normal;
+  font-weight: 400;
+  font-size: 96px;
+}
+
+.mainLogo {
+  width: 30vw;
+  fill: whitesmoke;
+  stroke: #000;
+  stroke-width: 0;
+  stroke-miterlimit: 4;
+  stroke-dasharray: none;
+}
+
+.Link {
+  color: unset;
+  
 }
