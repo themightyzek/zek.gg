@@ -3,10 +3,18 @@
 
 .App {
   text-align: center;
-  background-color: #282c34;
+  background-color: #131418;
+  font-family: meno-banner, normal;
   min-height: 100vh;
   max-height: 100vh;
   color: whitesmoke;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.Header {
+  overflow: hidden;
+  flex: 0 1 auto;
 }
 
 .App-logo {
@@ -47,29 +55,45 @@
 .main {
   display: flex;
   flex-direction: row;
+  background-image: url('./images/voicu-apostol-93F3aiv_ioM-unsplash.jpg');
+  flex: 1 1 auto;
 }
 
 .mainLeft {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .mainRight {
   flex: 1;
-  font-family: meno-banner, normal;
-  font-weight: 400;
-  font-size: 96px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .mainLogo {
-  width: 30vw;
+  width: 20vw;
+  height: auto;
   fill: whitesmoke;
   stroke: #000;
   stroke-width: 0;
   stroke-miterlimit: 4;
   stroke-dasharray: none;
+  padding: 10%;
 }
 
-.Link {
+.mainLink {
   color: unset;
-  
+  font-weight: 400;
+  font-size: 96px;
+  text-decoration: none;
+  flex: 1;
+}
+
+.linkContainer {
+  padding: 16px;
 }

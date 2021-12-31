@@ -7,11 +7,13 @@ import { ReactComponent as MainLogo } from "./logo/logo.min.svg";
 function App() {
   return (
     <div className="App">
-      <h1 style={{ margin: 0 }}>zek.gg</h1>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
+      <header className="Header">
+        <h1 style={{}}>ZEK.GG</h1>
+      </header>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
     </div>
   );
 }
@@ -19,14 +21,14 @@ function App() {
 function Home() {
   return (
     <>
-      <main>
-        <div className="main">
-          <div className="mainLeft">
-            <MainLogo className="mainLogo"/>
-          </div>
-          <div className="mainRight">
-            <Link className="Link" to="/about">PROJECTS</Link>
-          </div>
+      <main className="main">
+        <div className="mainLeft">
+          <MainLogo className="mainLogo" />
+        </div>
+        <div className="mainRight">
+          {mainLink("/about", "PROJECTS")}
+          {mainLink("/about", "TIMELINE")}
+          {mainLink("/about", "CONTACT")}
         </div>
       </main>
     </>
@@ -43,6 +45,18 @@ function About() {
       <nav>
         <Link to="/">Home</Link>
       </nav>
+    </>
+  );
+}
+
+function mainLink(to, text) {
+  return (
+    <>
+      <div className="linkContainer">
+        <Link className="mainLink" to={to}>
+          {text}
+        </Link>
+      </div>
     </>
   );
 }
