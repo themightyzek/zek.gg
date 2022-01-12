@@ -2,14 +2,17 @@ import { Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import { unstable_batchedUpdates } from "react-dom";
 import { ReactComponent as MainLogo } from "./logo/logo.min.svg";
-import projectImage from "./images/li-zhang-8atj_eBENI8-unsplash.jpg";
+import scammusImage from "./images/li-zhang-8atj_eBENI8-unsplash.jpg";
+import sweepImage from "./images/sweep_3.png";
 import OpenInNew from "@mui/icons-material/OpenInNewOutlined"
 
 function App() {
   return (
     <div className="App">
       <header className="Header">
-        <h1 style={{}}>ZEK.GG</h1>
+        <Link to={"/"} className="UnformattedLink">
+          <h1>ZEK.GG [work in progress]</h1>
+        </Link>
       </header>
       <main>
         <Routes>
@@ -49,13 +52,33 @@ function Projects() {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={projectImage} alt="has nothing to do with the project" />
+            <img src={scammusImage} alt="has nothing to do with the project" />
             <div className="Right">
               <h1>Scammus</h1>
               <p>
-                Twitch chat bot to act as a prediction platform. Lorem ipsum
-                dolor sit amet, lorem imsum. Loerntia salvatica eher sintra ran
-                do litiront, eve candirad hambug.
+                Twitch chat bot written in C# using .NET Core 5. 
+                Facilitates gambling of fake points, with moderators using chat commands
+                to manage predictions.
+              </p>
+              <div className="IconBar">
+                <OpenInNew/>
+              </div>
+            </div>
+          </a>
+
+          <a
+            className="ProjectCard"
+            href="https://drive.google.com/drive/folders/1AZ36po58uy67y8-aqe3WVNhobgWmlGKc?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={sweepImage} alt="three phone screens showing different views of a finance app" />
+            <div className="Right">
+              <h1>Sweep</h1>
+              <p>
+                UI Study on a fictional personal finance tracking app. 
+                Prototype built in Axure RP 9, using Material design components and guidelines.
+                Features user stories, a design draft, performance analysis, and 
               </p>
               <div className="IconBar">
                 <OpenInNew/>

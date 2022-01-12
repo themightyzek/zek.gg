@@ -14,6 +14,15 @@
   flex-flow: column nowrap;
 }
 
+.UnformattedLink {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.text-link {
+  color: whitesmoke;
+}
+
 .Header {
   overflow: hidden;
   flex: 0 1 auto; /* Sized to content */
